@@ -36,3 +36,9 @@ INSERT INTO staff (name, staff_number) VALUES ('Hamza', 55);
 INSERT INTO staff (name, staff_number) VALUES ('Amber', 13);
 INSERT INTO staff (name, staff_number) VALUES ('Bianca', 11);
 INSERT INTO staff (name, staff_number) VALUES ('Ben', 66);
+
+-- insert enclosures
+INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Primates', 10, FALSE);
+INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Reptiles', 10, FALSE);
+INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Wild Cats', 10, TRUE);
+INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Birds', 10, FALSE);
