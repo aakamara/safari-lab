@@ -67,7 +67,7 @@ INSERT INTO assignments (day, employee_id, enclosure_id) VALUES ('Sunday', 3, 1)
 
 -- QUERIES MVP ---------------------------------------------------------------------------
 
--- QUEsTION 1 --
+-- the names of the animals in a given enclosure --
 SELECT (animals.name)
 FROM assignments
 INNER JOIN enclosures
@@ -78,7 +78,7 @@ INNER JOIN animals
 ON enclosures.id = animals.enclosure_id
 WHERE enclosures.name = 'Reptiles';
 
--- QUESTION 2 --
+-- the names of the staff working in a given enclosure --
 SELECT (staff.name)
 FROM assignments
 INNER JOIN enclosures
@@ -88,4 +88,28 @@ ON assignments.employee_id = staff.id
 INNER JOIN animals
 ON enclosures.id = animals.enclosure_id
 WHERE enclosures.name = 'Primates';
+
+-- MVP EXTENTION ---------------------------------------------------------------------------
+
+-- the name of staff working in enclosures which are closed for maintenance --
+SELECT (staff.name)
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE enclosures.closed_for_maintenance = TRUE;
+
+-- the name of the enclosure where teh oldest animal lives --
+SELECT (enclosures.name)
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE animals.age = (SELECT MAX(age) FROM animals);
 
