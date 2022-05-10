@@ -42,3 +42,16 @@ INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Primate
 INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Reptiles', 10, FALSE);
 INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Wild Cats', 10, TRUE);
 INSERT INTO enclosures (name, capacity, closed_for_maintenance) VALUES ('Birds', 10, FALSE);
+
+-- insert animals
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Simba', 'Lion', 2, 1);
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('ShereKhan', 'Tiger', 45, 1);
+
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Lago', 'Parrot', 12, 2);
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Skipper', 'Penguin', 5, 2);
+
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Kaa', 'Snake', 60, 3);
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Oogway', 'Tortoise', 100, 3);
+
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Harambe', 'Gorilla', 9, 4);
+INSERT INTO animals (name, type, age, enclosure_id) VALUES('Julian', 'Lemur', 16, 4);
