@@ -32,7 +32,7 @@ CREATE TABLE assignments (
 );
 
 -- insert staff members
-INSERT INTO staff (name, employee_number) VALUES ('Hamza', 55);
-INSERT INTO staff (name, employee_number) VALUES ('Amber', 13);
-INSERT INTO staff (name, employee_number) VALUES ('Bianca', 11);
-INSERT INTO staff (name, employee_number) VALUES ('Ben', 66);
+INSERT INTO staff (name, staff_number) VALUES ('Hamza', 55);
+INSERT INTO staff (name, staff_number) VALUES ('Amber', 13);
+INSERT INTO staff (name, staff_number) VALUES ('Bianca', 11);
+INSERT INTO staff (name, staff_number) VALUES ('Ben', 66);
