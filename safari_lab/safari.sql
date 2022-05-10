@@ -70,3 +70,5 @@ INSERT INTO assignments (employee_id, enclosure_id, day) VALUES (5, 2, 'Wednesda
 INSERT INTO assignments (employee_id, enclosure_id, day) VALUES (1, 1, 'Monday');
 INSERT INTO assignments (employee_id, enclosure_id, day) VALUES (2, 4, 'Friday');
 INSERT INTO assignments (employee_id, enclosure_id, day) VALUES (5, 3, 'Saturday');
+
+-- safari lab
