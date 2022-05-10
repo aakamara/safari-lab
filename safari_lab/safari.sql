@@ -21,7 +21,7 @@ CREATE TABLE animals (
     name VARCHAR(255),
     type VARCHAR (255),
     age INT,
-    enclosures_id INT REFERENCES enclosures(id)
+    enclosure_id INT REFERENCES enclosures(id)
 );
 
 CREATE TABLE assignments (
