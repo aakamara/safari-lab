@@ -30,3 +30,9 @@ CREATE TABLE assignments (
     enclosure_id INT REFERENCES enclosures(id),
     day VARCHAR(255)
 );
+
+-- insert staff members
+INSERT INTO staff (name, employee_number) VALUES ('Hamza', 55);
+INSERT INTO staff (name, employee_number) VALUES ('Amber', 13);
+INSERT INTO staff (name, employee_number) VALUES ('Bianca', 11);
+INSERT INTO staff (name, employee_number) VALUES ('Ben', 66);
