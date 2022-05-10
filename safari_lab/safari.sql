@@ -78,3 +78,14 @@ INNER JOIN animals
 ON enclosures.id = animals.enclosure_id
 WHERE enclosures.name = 'Reptiles';
 
+-- QUESTION 2 --
+SELECT (staff.name)
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE enclosures.name = 'Primates';
+
