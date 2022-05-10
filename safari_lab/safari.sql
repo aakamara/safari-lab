@@ -64,3 +64,17 @@ INSERT INTO assignments (day, employee_id, enclosure_id) VALUES ('Thursday', 4, 
 INSERT INTO assignments (day, employee_id, enclosure_id) VALUES ('Friday', 1, 2);
 INSERT INTO assignments (day, employee_id, enclosure_id) VALUES ('Saturday', 2, 4);
 INSERT INTO assignments (day, employee_id, enclosure_id) VALUES ('Sunday', 3, 1);
+
+-- QUERIES MVP ---------------------------------------------------------------------------
+
+-- QUEsTION 1 --
+SELECT (animals.name)
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE enclosures.name = 'Reptiles';
+
