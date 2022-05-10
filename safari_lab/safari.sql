@@ -15,3 +15,12 @@ CREATE TABLE enclosures (
     capacity INT,
     closed_for_maintenance BOOLEAN
 );
+
+CREATE TABLE animals (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    type VARCHAR (255),
+    age INT,
+    enclosures_id INT REFERENCES enclosures(id)
+);
+
