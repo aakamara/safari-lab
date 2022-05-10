@@ -24,3 +24,9 @@ CREATE TABLE animals (
     enclosures_id INT REFERENCES enclosures(id)
 );
 
+CREATE TABLE assignments (
+    id SERIAL PRIMARY KEY,
+    employee_id INT REFERENCES staff(id),
+    enclosure_id INT REFERENCES enclosures(id),
+    day VARCHAR(255)
+);
