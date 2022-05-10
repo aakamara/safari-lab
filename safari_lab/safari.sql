@@ -113,3 +113,40 @@ INNER JOIN animals
 ON enclosures.id = animals.enclosure_id
 WHERE animals.age = (SELECT MAX(age) FROM animals);
 
+-- the number of different animal types a given keeper has been assigned to work with --
+
+SELECT COUNT(DISTINCT animals.type)
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id 
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE staff.name = 'Amber';
+
+
+-- the number of different keepers who have been assigned to work in a given enclosure --
+
+SELECT COUNT(DISTINCT staff.name) 
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id 
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE enclosures.name = 'Birds';
+
+
+-- the names of the other animals sharing an enclosure with a given animal (eg. find the names of all the animals sharing the big cat field with Tony) --
+
+SELECT (animals.name) 
+FROM assignments
+INNER JOIN enclosures
+ON assignments.enclosure_id = enclosures.id 
+INNER JOIN staff
+ON assignments.employee_id = staff.id
+INNER JOIN animals
+ON enclosures.id = animals.enclosure_id
+WHERE enclosures.id = (SELECT enclosure_id FROM animals WHERE name = 'Harambe');
